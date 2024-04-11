@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Jeu du Pendu</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>Jeu du Pendu</h1>
+
+    <section id="section_du_haut">
+      <p class="info">
+        <u>But du jeu :</u> Trouvez le mot en faisant le moins d'erreurs
+        possibles.<br />
+        <i
+          >Vous ne pourrez pas relancer une partie tant qu'une partie est en
+          cours.</i
+        ><br />
+      </p>
+    </section>
+
+    <section id="section_du_milieu">
+      <section id="jeu">
+        <div>
+          <label>Indices =</label>
+          <input type="text" id="zone_mot" placeholder="Zone mot" readonly />
+        </div>
+        <div>
+          <label>Lettres utilisées =</label>
+          <input
+            type="text"
+            id="zone_essais"
+            placeholder="Zone essais"
+            readonly
+          />
+        </div>
+        <div>
+          <label>Nombre d'erreurs permises =</label>
+          <input type="number" id="nb_erreurs_permises" value="0" readonly />
+        </div>
+      </section>
+
+      <section>
+        <section id="clavier_jeu">
+          <div>
+            <button class="lettre">A</button>
+            <button class="lettre">Z</button>
+            <button class="lettre">E</button>
+            <button class="lettre">R</button>
+            <button class="lettre">T</button>
+            <button class="lettre">Y</button>
+            <button class="lettre">U</button>
+            <button class="lettre">I</button>
+            <button class="lettre">O</button>
+            <button class="lettre">P</button>
+          </div>
+
+          <div>
+            <button class="lettre">Q</button>
+            <button class="lettre">S</button>
+            <button class="lettre">D</button>
+            <button class="lettre">F</button>
+            <button class="lettre">G</button>
+            <button class="lettre">H</button>
+            <button class="lettre">J</button>
+            <button class="lettre">K</button>
+            <button class="lettre">L</button>
+            <button class="lettre">M</button>
+          </div>
+
+          <div>
+            <button class="lettre">W</button>
+            <button class="lettre">X</button>
+            <button class="lettre">C</button>
+            <button class="lettre">V</button>
+            <button class="lettre">B</button>
+            <button class="lettre">N</button>
+          </div>
+
+          <div>
+            <button id="bouton_nouvelle_partie" class="tres_gros_bouton">
+              Lancer une nouvelle partie
+            </button>
+          </div>
+        </section>
+
+        <section id="zone_messages">
+          <p id="message_avertissement" class="message avertissement">
+            Message avertissement
+          </p>
+          <p id="message_perdu" class="message perdu">Message perdu</p>
+          <p id="message_gagne" class="message gagne">Message gagné</p>
+        </section>
+      </section>
+    </section>
+
+    <section id="section_du_bas">
+      <p class="info"><b>Score</b> : <span id="score">0</span></p>
+    </section>
+
+    <!-- Intégration des scripts JS -->
+    <script src="js/view.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/controller.js"></script>
+  </body>
+</html>
